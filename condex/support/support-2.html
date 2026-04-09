@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConDex Support</title>
+<style>
+  :root {
+    --bg: #f4f1e8;
+    --ink: #1a1a1a;
+    --red: #c8312b;
+    --green: #4a8c3f;
+    --border: #1a1a1a;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 2rem 1rem;
+    background: var(--red);
+    color: white;
+    border: 4px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 var(--border);
+  }
+  header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.95;
+  }
+  .badge {
+    display: inline-block;
+    background: white;
+    color: var(--red);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    border: 2px solid var(--border);
+  }
+  section {
+    background: var(--card);
+    border: 3px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+  h2 {
+    margin-top: 0;
+    color: var(--red);
+    border-bottom: 2px solid var(--bg);
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+    color: var(--green);
+  }
+  p, li { font-size: 1rem; }
+  ul { padding-left: 1.25rem; }
+  a {
+    color: var(--red);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--red);
+  }
+  a:hover { background: var(--red); color: white; }
+  .contact-card {
+    background: var(--green);
+    color: white;
+    text-align: center;
+  }
+  .contact-card h2 { color: white; border-bottom-color: rgba(255,255,255,0.3); }
+  .contact-card a { color: white; border-bottom-color: white; }
+  .contact-card a:hover { background: white; color: var(--green); }
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+  code {
+    background: var(--bg);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>ConDex Support</h1>
+    <p>Help, FAQs, and how to reach us</p>
+    <div class="badge">#1996</div>
+  </header>
+
+  <section>
+    <h2>Getting Started</h2>
+    <h3>How do I add my contacts?</h3>
+    <p>On first launch, ConDex will ask permission to access your contacts. Tap <strong>Allow</strong> and your address book will be imported automatically, with each contact assigned a unique ConDex number. If you skipped this step, you can grant access later in <code>Settings → ConDex → Contacts</code>.</p>
+
+    <h3>Why can't I see my contacts?</h3>
+    <p>This usually means contacts permission was denied. Open the iOS Settings app, scroll down to ConDex, tap <strong>Contacts</strong>, and toggle it on. Then return to ConDex and pull down to refresh.</p>
+
+    <h3>How do iCloud sync and backup work?</h3>
+    <p>ConDex syncs your data to your personal iCloud account using Apple's CloudKit. As long as you're signed into iCloud on your device and have iCloud Drive enabled, your ConDex data will sync automatically across all your devices signed into the same Apple ID. Your data is private and never accessible to anyone else, including the developer.</p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <h3>What is a "shiny" contact?</h3>
+    <p>Shiny contacts are a rare cosmetic variant inspired by classic monster-collecting games. Roughly 1 in 20 contacts will be designated as shiny, adding a sparkle effect to their card. It's purely visual — no special powers, no purchases, just a fun discovery.</p>
+
+    <h3>How do I create a character avatar?</h3>
+    <p>Open any contact, tap their avatar, and select <strong>Create Character</strong>. You can customize hair, eyes, outfit, and colors using the pixel-art editor. Your creation is saved with that contact and syncs via iCloud.</p>
+
+    <h3>How do birthday reminders work?</h3>
+    <p>If a contact has a birthday set, ConDex can send a local notification on the day. Make sure notifications are enabled in <code>Settings → ConDex → Notifications</code>. Reminders are generated entirely on-device — no data is sent anywhere.</p>
+
+    <h3>Why doesn't the weather show up?</h3>
+    <p>The weather header requires both location permission and an internet connection. Check that location access is granted in <code>Settings → ConDex → Location</code> and that you have a network connection. If WeatherKit is temporarily unavailable, the header will hide gracefully.</p>
+  </section>
+
+  <section>
+    <h2>Troubleshooting</h2>
+    <h3>My edits to a contact disappeared</h3>
+    <p>Make sure you're on the latest version of ConDex. If you're still seeing this, try force-quitting the app (swipe up from the home bar and swipe ConDex away), then reopen it. If the problem persists, please email us with details.</p>
+
+    <h3>Sync isn't working between my devices</h3>
+    <p>Verify the following: (1) both devices are signed into the same Apple ID, (2) iCloud Drive is enabled on both, (3) ConDex is enabled under <code>Settings → [Your Name] → iCloud → Apps Using iCloud</code>, and (4) both devices have a network connection. Initial sync after installing on a new device can take a few minutes.</p>
+
+    <h3>The app crashed or froze</h3>
+    <p>Force-quit and reopen. If it happens repeatedly, please email us with your iOS version, device model, and what you were doing when it happened.</p>
+
+    <h3>How do I delete the app and start over?</h3>
+    <p>Long-press the ConDex icon and tap <strong>Remove App → Delete App</strong>. Note that your iCloud data will remain — reinstalling will restore everything from your iCloud account.</p>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <p>ConDex does not collect, transmit, or share any personal data. Everything stays on your device or in your private iCloud account. For full details, see our <a href="https://zanther.github.io/condex-app-pages/privacy-policy/">Privacy Policy</a>.</p>
+  </section>
+
+  <section class="contact-card">
+    <h2>Still Need Help?</h2>
+    <p>Email us and we'll get back to you as soon as we can.</p>
+    <p style="font-size: 1.2rem; margin-top: 1rem;">
+      <a href="mailto:steven@16bitotaku.com">steven@16bitotaku.com</a>
+    </p>
+    <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 1rem;">
+      Please include your iOS version, device model, and a description of the issue.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 [Your Name] · ConDex is not affiliated with Nintendo, The Pokémon Company, or any related entity.</p>
+  </footer>
+
+</div>
+</body>
+</html>
