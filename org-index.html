@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16-bit Otaku — Gaming, Collectibles, Tech & Apps</title>
+<style>
+  :root {
+    --bg: #f4f1e8;
+    --ink: #1a1a1a;
+    --red: #c8312b;
+    --green: #4a8c3f;
+    --purple: #6a3fa0;
+    --border: #1a1a1a;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 2.5rem 1rem;
+    background: var(--red);
+    color: white;
+    border: 4px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 var(--border);
+  }
+  header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  header .tagline {
+    margin: 0.5rem 0 0;
+    font-size: 1.15rem;
+    opacity: 0.95;
+  }
+  section {
+    background: var(--card);
+    border: 3px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+  h2 {
+    margin-top: 0;
+    color: var(--red);
+    border-bottom: 2px solid var(--bg);
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  p { font-size: 1rem; }
+  a {
+    color: var(--red);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--red);
+  }
+  a:hover { background: var(--red); color: white; }
+
+  .what-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .what-tile {
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  .what-tile h3 {
+    margin: 0 0 0.4rem;
+    color: var(--green);
+    font-size: 1rem;
+  }
+  .what-tile p { margin: 0; font-size: 0.92rem; }
+
+  .app-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .app-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--red);
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .app-info { flex: 1; min-width: 0; }
+  .app-info h3 { margin: 0 0 0.25rem; font-size: 1.2rem; color: var(--ink); }
+  .app-info p { margin: 0; font-size: 0.92rem; color: var(--ink); }
+
+  .links-card {
+    background: var(--purple);
+    color: white;
+    text-align: center;
+  }
+  .links-card h2 { color: white; border-bottom-color: rgba(255,255,255,0.3); }
+  .links-card p { margin-bottom: 1rem; }
+  .big-link {
+    display: inline-block;
+    background: white;
+    color: var(--purple);
+    padding: 0.75rem 1.75rem;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: 3px solid var(--border);
+    box-shadow: 3px 3px 0 var(--border);
+    margin-top: 0.5rem;
+  }
+  .big-link:hover {
+    background: var(--purple);
+    color: white;
+  }
+
+  .contact-card {
+    background: var(--green);
+    color: white;
+    text-align: center;
+  }
+  .contact-card h2 { color: white; border-bottom-color: rgba(255,255,255,0.3); }
+  .contact-card a { color: white; border-bottom-color: white; }
+  .contact-card a:hover { background: white; color: var(--green); }
+
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>16-bit Otaku</h1>
+    <p class="tagline">Gaming · Collectibles · Tech · Apps</p>
+  </header>
+
+  <section>
+    <h2>Hey, I'm Steven</h2>
+    <p>I'm the creator behind 16-bit Otaku — a one-person operation covering everything I love about gaming and the gear around it. From retro inspiration to modern tech, it's all about playing and collecting what you love.</p>
+  </section>
+
+  <section>
+    <h2>What I Do</h2>
+    <div class="what-grid">
+      <div class="what-tile">
+        <h3>YouTube</h3>
+        <p>Reviews, unboxings, and hands-on content covering gaming, collectibles, and tech.</p>
+      </div>
+      <div class="what-tile">
+        <h3>Twitch Streams</h3>
+        <p>Live gameplay across retro classics and modern releases.</p>
+      </div>
+      <div class="what-tile">
+        <h3>Art Commissions</h3>
+        <p>Custom pixel art and character work for fans and fellow collectors.</p>
+      </div>
+      <div class="what-tile">
+        <h3>iOS Apps</h3>
+        <p>SwiftUI apps for iPhone, built with retro aesthetics at the core.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Apps</h2>
+    <a href="./condex/" class="app-card">
+      <div class="app-icon">#1996</div>
+      <div class="app-info">
+        <h3>ConDex</h3>
+        <p>A retro contact manager that turns your address book into a collectible adventure. Coming soon to the App Store.</p>
+      </div>
+    </a>
+  </section>
+
+  <section class="links-card">
+    <h2>Find Me Everywhere</h2>
+    <p>YouTube, Twitch, commissions, socials — all my links live in one place.</p>
+    <a href="https://linktr.ee/chromakira" class="big-link">Visit Linktree →</a>
+  </section>
+
+  <section class="contact-card">
+    <h2>Get In Touch</h2>
+    <p>Business inquiries, app support, or just want to say hi?</p>
+    <p style="font-size: 1.2rem; margin-top: 1rem;">
+      <a href="mailto:steven@16bitotaku.com">steven@16bitotaku.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Steven Lattenhauer II · 16-bit Otaku</p>
+  </footer>
+
+</div>
+</body>
+</html>
