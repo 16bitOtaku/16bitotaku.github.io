@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConDex — Collect Your Contacts</title>
+<style>
+  :root {
+    --bg: #f4f1e8;
+    --ink: #1a1a1a;
+    --red: #c8312b;
+    --green: #4a8c3f;
+    --border: #1a1a1a;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 2.5rem 1rem;
+    background: var(--red);
+    color: white;
+    border: 4px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 var(--border);
+  }
+  header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  header .tagline {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    opacity: 0.95;
+  }
+  .badge {
+    display: inline-block;
+    background: white;
+    color: var(--red);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    border: 2px solid var(--border);
+  }
+  section {
+    background: var(--card);
+    border: 3px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+  h2 {
+    margin-top: 0;
+    color: var(--red);
+    border-bottom: 2px solid var(--bg);
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  p, li { font-size: 1rem; }
+  ul { padding-left: 1.25rem; }
+  ul li { margin-bottom: 0.5rem; }
+  a {
+    color: var(--red);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--red);
+  }
+  a:hover { background: var(--red); color: white; }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .feature {
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  .feature h3 {
+    margin: 0 0 0.4rem;
+    color: var(--green);
+    font-size: 1rem;
+  }
+  .feature p { margin: 0; font-size: 0.92rem; }
+  .links-card {
+    background: var(--green);
+    color: white;
+    text-align: center;
+  }
+  .links-card h2 { color: white; border-bottom-color: rgba(255,255,255,0.3); }
+  .links-card a { color: white; border-bottom-color: white; }
+  .links-card a:hover { background: white; color: var(--green); }
+  .link-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>ConDex</h1>
+    <p class="tagline">Your contacts, reimagined.</p>
+    <div class="badge">#1996</div>
+  </header>
+
+  <section>
+    <h2>What is ConDex?</h2>
+    <p>ConDex is a retro-inspired contact manager for iPhone that turns your address book into a collectible adventure. Every contact gets a unique ConDex number, a custom pixel-art avatar, and a collectible card. Discover rare "shiny" contacts, never miss a birthday, and keep everything in sync with iCloud.</p>
+    <p>Built with SwiftUI for iOS, designed with love for retro gaming culture.</p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>ConDex Numbers</h3>
+        <p>Every contact gets a unique number and collectible card.</p>
+      </div>
+      <div class="feature">
+        <h3>Pixel Avatars</h3>
+        <p>Create custom 16-bit character avatars for everyone you know.</p>
+      </div>
+      <div class="feature">
+        <h3>Shiny Contacts</h3>
+        <p>Discover rare sparkle-effect cards, hidden across your roster.</p>
+      </div>
+      <div class="feature">
+        <h3>Birthday Reminders</h3>
+        <p>Local notifications so you never miss an important day.</p>
+      </div>
+      <div class="feature">
+        <h3>iCloud Sync</h3>
+        <p>Your collection follows you across all your devices, privately.</p>
+      </div>
+      <div class="feature">
+        <h3>Family & Groups</h3>
+        <p>Auto-grouping for relations, plus custom groups you can reorder.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Privacy First</h2>
+    <p>ConDex collects nothing. No analytics, no tracking, no developer servers. Your data stays on your device and in your own private iCloud account. Read the full <a href="./privacy-policy/">Privacy Policy</a> for details.</p>
+  </section>
+
+  <section class="links-card">
+    <h2>Links</h2>
+    <p>Everything you need for ConDex, in one place.</p>
+    <div class="link-list">
+      <a href="./support/">Support</a>
+      <a href="./privacy-policy/">Privacy Policy</a>
+      <a href="mailto:steven@16bitotaku.com">Contact</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 16bitotaku · Made with ♥ in Maryland</p>
+    <p>ConDex is not affiliated with Nintendo, The Pokémon Company, or any related entity.</p>
+  </footer>
+
+</div>
+</body>
+</html>
